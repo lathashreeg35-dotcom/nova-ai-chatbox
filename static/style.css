@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#0f172a,#312e81,#4f46e5,#2563eb);
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+    overflow:hidden;
+}
+
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:420px;
+    height:720px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+.header{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    color:white;
+    text-align:center;
+    padding:25px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.header h2{
+    font-size:30px;
+}
+
+.header p{
+    color:#d1d5db;
+    font-size:14px;
+    margin-top:5px;
+}
+
+.chat-box{
+    height:540px;
+    padding:20px;
+    overflow-y:auto;
+}
+
+.bot-message,
+.user-message{
+    padding:15px;
+    border-radius:18px;
+    margin:12px 0;
+    max-width:75%;
+    color:white;
+}
+
+.bot-message{
+    background:#334155;
+}
+
+.user-message{
+    background:linear-gradient(135deg,#7c3aed,#2563eb);
+    margin-left:auto;
+}
+
+.input-area{
+    display:flex;
+    padding:15px;
+    background:rgba(255,255,255,.05);
+}
+
+input{
+    flex:1;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:#1e293b;
+    color:white;
+    font-size:16px;
+}
+
+button{
+    margin-left:10px;
+    width:60px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(135deg,#7c3aed,#2563eb);
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.logo{
+
+    width:70px;
+    height:70px;
+
+    margin:0 auto 15px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:38px;
+
+    background:linear-gradient(135deg,#7c3aed,#2563eb);
+
+    box-shadow:0 0 25px rgba(124,58,237,.6);
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
